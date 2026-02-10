@@ -46,15 +46,20 @@ This project was a deep dive into several key React concepts:
 2.  **Side Effects (`useEffect`)**:
     *   Implemented `useEffect` to save and load data from `localStorage`.
     *   This ensures the user's history and favorites persist even after a page refresh.
+    *   Combined with `useRef` to trigger scrolling when a new recipe is loaded.
 
-3.  **Form Handling**:
+3.  **DOM Access (`useRef`)**:
+    *   Used `useRef` to create a reference to the recipe section (`recipeSection`).
+    *   This allows the app to programmatically scroll the view to the newly generated recipe using `scrollIntoView({ behavior: 'smooth' })`, improving the user experience.
+
+4.  **Form Handling**:
     *   Used standard HTML forms and the `FormData` API to handle ingredient submissions cleanly.
 
-4.  **API Integration**:
+5.  **API Integration**:
     *   Learned `async/await` patterns to fetch data from the Gemini AI.
     *   Handled loading states to show a "Thinking..." animation and error states for robust user experience.
 
-5.  **Conditional Rendering**:
+6.  **Conditional Rendering**:
     *   Dynamically showing user feedback (e.g., "Add 3 more ingredients to unlock") and toggling between views (Recipe vs. History).
 
 ## 🏃‍♂️ How to Run Locally
